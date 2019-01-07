@@ -41,7 +41,7 @@ function saveXML(doc: XMLDocument, res: express.Response) {
  **/
 function getPatient(doc: XMLDocument, socialSecurityNumber: string): Element {
     const L: Element[] = Array.from( doc.getElementsByTagName("patient") ); // doc.getElementsByTagName('patient');
-    return L.find( E => E.getElementsByTagName("numéro")[0].textContent === socialSecurityNumber );
+    return L.find( E => E.getElementsByTagName("numero")[0].textContent === socialSecurityNumber );
 }
 
 
@@ -95,7 +95,7 @@ function init(port, applicationServerIP, applicationServerPort) {
                     L_nurses.forEach( nurse => {
                         const option = docHTML.createElement("option");
                         option.setAttribute( "value", nurse.getAttribute("id") );
-                        option.textContent	= nurse.getElementsByTagName("prénom")[0].textContent
+                        option.textContent	= nurse.getElementsByTagName("prenom")[0].textContent
                                             + " "
                                             + nurse.getElementsByTagName("nom")[0].textContent
                         ;
@@ -141,23 +141,23 @@ function init(port, applicationServerIP, applicationServerPort) {
     app.post( "/addPatient", (req, res) => {
             console.log("/addPatient, \nreq.body:\n\t", req.body, "\n_______________________");
             const patient = {
-                prénom: req.body.patientForname || "",
+                prenom: req.body.patientForname || "",
                 nom: req.body.patientName || "",
                 sexe: req.body.patientSex || "F",
                 naissance: req.body.naissance || "",
-                numéroSécuriteSociale: req.body.patientNumber || "undefined",
+                numeroSecuriteSociale: req.body.patientNumber || "undefined",
                 adresse: {
                     ville: req.body.patientCity || "",
                     codePostal: req.body.patientPostalCode || "",
                     rue: req.body.patientStreet || "",
-                    numéro: req.body.patientStreetNumber || "",
-                    étage: req.body.patientFloor || ""
+                    numero: req.body.patientStreetNumber || "",
+                    etage: req.body.patientFloor || ""
                 }
             };
 
             const patients = doc.getElementsByTagName("patients")[0];
             // Is it a new patient or not ?
-            let newPatient = getPatient(doc, patient.numéroSécuriteSociale);
+            let newPatient = getPatient(doc, patient.numeroSecuriteSociale);
             if(!newPatient) {
                 newPatient = doc.createElement("patient");
                 patients.appendChild( newPatient );
@@ -172,13 +172,13 @@ function init(port, applicationServerIP, applicationServerPort) {
             nom.appendChild( doc.createTextNode(patient.nom) );
             newPatient.appendChild( nom );
             // Forname
-            const prénom = doc.createElement("prénom");
-            prénom.appendChild( doc.createTextNode(patient.prénom) );
-            newPatient.appendChild( prénom );
+            const prenom = doc.createElement("prenom");
+            prenom.appendChild( doc.createTextNode(patient.prenom) );
+            newPatient.appendChild( prenom );
             // Social security number
-            const numéro = doc.createElement("numéro");
-            numéro.appendChild( doc.createTextNode(patient.numéroSécuriteSociale) );
-            newPatient.appendChild( numéro );
+            const numero = doc.createElement("numero");
+            numero.appendChild( doc.createTextNode(patient.numeroSecuriteSociale) );
+            newPatient.appendChild( numero );
             // Sex
             const sexe = doc.createElement("sexe");
             sexe.appendChild( doc.createTextNode(patient.sexe) );
@@ -194,11 +194,11 @@ function init(port, applicationServerIP, applicationServerPort) {
             // Adress
             const adresse = doc.createElement("adresse");
             newPatient.appendChild( adresse );
-                const etage = doc.createElement("étage");
-                etage.appendChild( doc.createTextNode(patient.adresse.étage) );
+                const etage = doc.createElement("etage");
+                etage.appendChild( doc.createTextNode(patient.adresse.etage) );
                 adresse.appendChild( etage );
-                const numAdress = doc.createElement("numéro");
-                numAdress.appendChild( doc.createTextNode(patient.adresse.numéro) );
+                const numAdress = doc.createElement("numero");
+                numAdress.appendChild( doc.createTextNode(patient.adresse.numero) );
                 adresse.appendChild( numAdress );
                 const rue = doc.createElement("rue");
                 rue.appendChild( doc.createTextNode(patient.adresse.rue) );
@@ -227,7 +227,7 @@ function init(port, applicationServerIP, applicationServerPort) {
                     // Get node corresponding to the patient
                     const LP = Array.from( doc.getElementsByTagName("patient") );
                     LP.forEach( patient => {
-                        const node_num = patient.getElementsByTagName("numéro")[0];
+                        const node_num = patient.getElementsByTagName("numero")[0];
                         if( node_num.textContent === req.body.patient ) {
                             if( req.body.infirmier === "none" ) {req.body.infirmier = "";}
                             patient.getElementsByTagName("visite")[0].setAttribute("intervenant", req.body.infirmier);

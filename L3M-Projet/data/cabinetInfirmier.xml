@@ -162,10 +162,10 @@
                 <ville>Montbonnot-Saint-Martin</ville>
                 <codePostal>38330</codePostal>
             </adresse>
-                <visite date="2014-12-08" intervenant="001">
+                <visite date="2014-12-08" intervenant="">
                     <acte id="401"/>
                 </visite>
                 
         </patient>
-        <patient><nom>Meliard</nom><prenom>Quentin</prenom><numero>66</numero><sexe>M</sexe><naissance></naissance><visite date="2014-12-08"/><adresse><etage></etage><numero>11</numero><rue>Oui des rues</rue><ville>Duingt</ville><codePostal>74410</codePostal></adresse></patient><patient><nom>Pinna</nom><prenom>Loris</prenom><numero>111111111111111</numero><sexe>M</sexe><naissance></naissance><visite date="2014-12-08"/><adresse><etage></etage><numero>22</numero><rue>Oui des rues</rue><ville>Paris</ville><codePostal>75005</codePostal></adresse></patient></patients>
+        <patient><nom>Meliard</nom><prenom>Quentin</prenom><numero>66</numero><sexe>M</sexe><naissance/><visite date="2014-12-08"/><adresse><etage/><numero>11</numero><rue>Oui des rues</rue><ville>Duingt</ville><codePostal>74410</codePostal></adresse></patient><patient><nom>Pinna</nom><prenom>Loris</prenom><numero>111111111111111</numero><sexe>M</sexe><naissance/><visite date="2014-12-08"/><adresse><etage/><numero>22</numero><rue>Oui des rues</rue><ville>Paris</ville><codePostal>75005</codePostal></adresse></patient></patients>
     </cabinet>

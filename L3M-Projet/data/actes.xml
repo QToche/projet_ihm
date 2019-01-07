@@ -5,107 +5,107 @@
     xsi:schemaLocation='http://www.ujf-grenoble.fr/l3miage/actes ../schema/actes.xsd'>
     
     <types>
-        <type id="pi">prélèvements et injections</type>
+        <type id="pi">prelèvements et injections</type>
         <type id="pc">pansements courants</type>
         <type id="pl">
-            pansements lourds et complexes nécessitant des condition 
+            pansements lourds et complexes necessitant des condition 
             d'asepsie rigoueuse
         </type>
         <type id="sd">
             Soins infirmiers à domicile pour un patient, quel que
-            soit son âge, en situation de dépendance temporaire ou permanante.
+            soit son âge, en situation de dependance temporaire ou permanante.
         </type>
     </types>
     <actes>
-        <acte id="101" type="pi" clé="AMI" coef="1.5"> 
-            Prélèvement par ponction veineuse directe
+        <acte id="101" type="pi" cle="AMI" coef="1.5"> 
+            Prelèvement par ponction veineuse directe
         </acte>
-        <acte id="102" type="pi" clé="AMI" coef="5">
-            Saignée      
+        <acte id="102" type="pi" cle="AMI" coef="5">
+            Saignee      
         </acte>
-        <acte id="103" type="pi" clé="AMI" coef="1">
-            Prélèvement aseptique cutané ou de sécrétions muqueuses, prélèvement
-            de selles ou d'urine pour examens sytologiques, bactériologiques, mycologiques.        
+        <acte id="103" type="pi" cle="AMI" coef="1">
+            Prelèvement aseptique cutane ou de secretions muqueuses, prelèvement
+            de selles ou d'urine pour examens sytologiques, bacteriologiques, mycologiques.        
         </acte>
-        <acte id="104" type="pi" clé="AMI" coef="2">
-            Inection intraveineuse directe isolée.
+        <acte id="104" type="pi" cle="AMI" coef="2">
+            Inection intraveineuse directe isolee.
         </acte>
-        <acte id="105" type="pi" clé="AMI" coef="1.5">
-            Injection intraveineuse directe en série.
+        <acte id="105" type="pi" cle="AMI" coef="1.5">
+            Injection intraveineuse directe en serie.
         </acte>
-        <acte id="106" type="pi" clé="AMI" coef="2">
+        <acte id="106" type="pi" cle="AMI" coef="2">
             Inection intraveineuse directe chez un enfant de moins de 5 ans.
         </acte>
-        <acte id="107" type="pi" clé="AMI" coef="1">
+        <acte id="107" type="pi" cle="AMI" coef="1">
             Injection intramusculaire.
         </acte>
-        <acte id="108" type="pi" clé="AMI" coef="5">
-            Injection d'un sérum d'origine humaine ou animale selon la méthode de 
+        <acte id="108" type="pi" cle="AMI" coef="5">
+            Injection d'un serum d'origine humaine ou animale selon la methode de 
             Besredka, y compris la surveillance.
         </acte>
-        <acte id="109" type="pi" clé="AMI" coef="1">
-            Injection sous-cutanée.
+        <acte id="109" type="pi" cle="AMI" coef="1">
+            Injection sous-cutanee.
         </acte>
-        <acte id="110" type="pi" clé="AMI" coef="1">
+        <acte id="110" type="pi" cle="AMI" coef="1">
             Injection intra dermique.
         </acte>
-        <acte id="111" type="pi" clé="AMI" coef="3">
+        <acte id="111" type="pi" cle="AMI" coef="3">
             Injection d'un ou plusieurs allergènes, poursuivant un traitement
-            d'hyposensibilisation spécifique, selon le protocole écrit, y compris la
+            d'hyposensibilisation specifique, selon le protocole ecrit, y compris la
             surveillance, la tenue du dossier de soins, la transmission des informations 
-            au médecin prescripteur.
+            au medecin prescripteur.
         </acte>
-        <acte id="112" type="pi" clé="AMI" coef="2.5">
-            Injection d'un implant sous cutané.
+        <acte id="112" type="pi" cle="AMI" coef="2.5">
+            Injection d'un implant sous cutane.
         </acte>
-        <acte id="113" type="pi" clé="AMI" coef="2">
+        <acte id="113" type="pi" cle="AMI" coef="2">
             Injection en goutte à goutte par voie rectale.
         </acte>
     
-        <acte id="200" type="pc" clé="AMI" coef="2">
+        <acte id="200" type="pc" cle="AMI" coef="2">
             Pansement de stomie
         </acte>
-        <acte id="201" type="pc" clé="AMI" coef="2.25">
-            Pansement de trachéotomie, y compirs l'aspiration et l'éventuel 
+        <acte id="201" type="pc" cle="AMI" coef="2.25">
+            Pansement de tracheotomie, y compirs l'aspiration et l'eventuel 
             changement de canule.
         </acte>
-        <acte id="202" type="pc" clé="AMI" coef="2">
+        <acte id="202" type="pc" cle="AMI" coef="2">
             Ablation de fils ou d'agrafes, dix ou moins, y compris le pansement 
-            éventuel.
+            eventuel.
         </acte>
-        <acte id="203" type="pc" clé="AMI" coef="4">
+        <acte id="203" type="pc" cle="AMI" coef="4">
             Ablation de fils ou d'agrafes, plus de dix, y compris le pansement 
-            éventuel.
+            eventuel.
         </acte>
-        <acte id="204" type="pc" clé="AMI" coef="2">
+        <acte id="204" type="pc" cle="AMI" coef="2">
             Autre pansement.
         </acte>
         
-        <acte id="300" type="pl" clé="AMI" coef="4">
-            Pansement de brûlure étendue ou de plaie chimique ou thermique étendue,
-            sur une surface supérieure à 5% de la surface corporelle.
+        <acte id="300" type="pl" cle="AMI" coef="4">
+            Pansement de brûlure etendue ou de plaie chimique ou thermique etendue,
+            sur une surface superieure à 5% de la surface corporelle.
         </acte>
-        <acte id="301" type="pl" clé="AMI" coef="4">
-            Pansement d'ulcère étendu ou de greffe cutanée, sur une surface 
-            supérieure à 60 cm2.
+        <acte id="301" type="pl" cle="AMI" coef="4">
+            Pansement d'ulcère etendu ou de greffe cutanee, sur une surface 
+            superieure à 60 cm2.
         </acte>
-        <acte id="302" type="pl" clé="AMI" coef="4">
+        <acte id="302" type="pl" cle="AMI" coef="4">
             Pansement de fistule digestive.
         </acte>
-        <acte id="303" type="pl" clé="AMI" coef="4">
-            Pansement chirurgical nécessitant un méchage ou une irrigation.
+        <acte id="303" type="pl" cle="AMI" coef="4">
+            Pansement chirurgical necessitant un mechage ou une irrigation.
         </acte>
         
-        <acte id="401" type="sd" clé="DI" coef="1.5">
-            Elaboration de la démache de soins infirmiers à domicile, planification 
-            des soins et rédaction du résumé de la démarche de soins infirimiers.
+        <acte id="401" type="sd" cle="DI" coef="1.5">
+            Elaboration de la demache de soins infirmiers à domicile, planification 
+            des soins et redaction du resume de la demarche de soins infirimiers.
         </acte>
-        <acte id="402" type="sd" clé="AIS" coef="3.1">
-            Mise en oeuvre d'un programme d'aide personnalisée.
+        <acte id="402" type="sd" cle="AIS" coef="3.1">
+            Mise en oeuvre d'un programme d'aide personnalisee.
         </acte>
-        <acte id="403" type="sd" clé="AIS" coef="4">
-            Séance hebdomadaire de surveillance clinique infirmière et de prévention 
-            par séance d'une demi-heure.
+        <acte id="403" type="sd" cle="AIS" coef="4">
+            Seance hebdomadaire de surveillance clinique infirmière et de prevention 
+            par seance d'une demi-heure.
         </acte>
     </actes>
 </ngap>

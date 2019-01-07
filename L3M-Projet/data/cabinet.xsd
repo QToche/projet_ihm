@@ -24,7 +24,7 @@
     <xsd:complexType name="Infirmier">
         <xsd:sequence>
             <xsd:element name="nom"/>
-            <xsd:element name="prénom"/>
+            <xsd:element name="prenom"/>
             <xsd:element name="photo" type="xsd:anyURI"/>
             <xsd:element name="adresse"     type="Adresse"/>
         </xsd:sequence>
@@ -40,10 +40,10 @@
     <xsd:complexType name="Patient">
         <xsd:sequence>
             <xsd:element name="nom"         type="xsd:string"/>
-            <xsd:element name="prénom"      type="xsd:string"/>
+            <xsd:element name="prenom"      type="xsd:string"/>
             <xsd:element name="sexe"        type="SexeId"/>
             <xsd:element name="naissance"   type="xsd:date"/>
-            <xsd:element name="numéro"      type="Nir"/>
+            <xsd:element name="numero"      type="Nir"/>
             <xsd:element name="adresse"     type="Adresse"/>
             <xsd:element name="visite"      type="Visite"/>
         </xsd:sequence>
@@ -65,8 +65,8 @@
     
     <xsd:complexType name="Adresse">
         <xsd:sequence>
-            <xsd:element name="étage"   type="xsd:int" minOccurs="0"/>
-            <xsd:element name="numéro"  type="xsd:int" minOccurs="0"/>
+            <xsd:element name="etage"   type="xsd:int" minOccurs="0"/>
+            <xsd:element name="numero"  type="xsd:int" minOccurs="0"/>
             <xsd:element name="rue"     type="xsd:string"/>
             <xsd:element name="ville"   type="xsd:string"/>
             <xsd:element name="codePostal"  type="CodePostal"/>
