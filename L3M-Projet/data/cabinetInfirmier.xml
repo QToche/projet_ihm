@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><cabinet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ujf-grenoble.fr/l3miage/cabinet" xsi:schemaLocation="http://www.ujf-grenoble.fr/l3miage/cabinet/../schema/cabinet.xsd">
     <nom>Soins à Grenoble</nom>
     <adresse>
-        <numéro>36</numéro>
+        <numero>36</numero>
         <rue>mail Marcel Cachin</rue>
         <ville>Fontaine</ville>
         <codePostal>38600</codePostal>
@@ -9,10 +9,10 @@
     <infirmiers>
         <infirmier id="001">
             <nom>Versaire</nom>
-            <prénom>Annie</prénom>
+            <prenom>Annie</prenom>
             <photo>homer1.gif</photo>
             <adresse>
-                <numéro>50</numéro>
+                <numero>50</numero>
                 <rue>route de Grenoble</rue>
                 <ville>Vizille</ville>
                 <codePostal>38220</codePostal>
@@ -20,10 +20,10 @@
         </infirmier>
         <infirmier id="002">
             <nom>Cent</nom>
-            <prénom>Sally</prénom>
+            <prenom>Sally</prenom>
             <photo>lisa111.gif</photo>
             <adresse>
-                <numéro>1</numéro>
+                <numero>1</numero>
                 <rue>Avenue de Verdun</rue>
                 <ville>Voiron</ville>
                 <codePostal>38500</codePostal>
@@ -31,10 +31,10 @@
         </infirmier>
         <infirmier id="003">
             <nom>Nouie</nom>
-            <prénom>Eva</prénom>
+            <prenom>Eva</prenom>
             <photo>maggie111.gif</photo>
             <adresse>
-                <numéro>10</numéro>
+                <numero>10</numero>
                 <rue>Lotissement de la plaine</rue>
                 <ville>Le Versoud</ville>
                 <codePostal>38420</codePostal>
@@ -44,32 +44,32 @@
     <patients>
         <patient>
             <nom>Aire</nom>
-            <prénom>Axel</prénom>
+            <prenom>Axel</prenom>
             <sexe>M</sexe>
             <naissance>1993-06-13</naissance>
-            <!-- Homme, né en juin 93 en France, à Marseille (n° 55 en bouches du rhône) 
-            453e naissance (clé calculée: 19)-->
-            <numéro>193061305545319</numéro>
+            <!-- Homme, ne en juin 93 en France, à Marseille (n° 55 en bouches du rhône) 
+            453e naissance (cle calculee: 19)-->
+            <numero>193061305545319</numero>
             <adresse>
-                <étage>4</étage>
-                <numéro>46</numéro>
-                <rue>avenue Félix Viallet</rue>
+                <etage>4</etage>
+                <numero>46</numero>
+                <rue>avenue Felix Viallet</rue>
                 <ville>Grenoble</ville>
                 <codePostal>38031</codePostal>            
             </adresse>
-                <!-- Ici, j'ai choisi d'identifier l'infirmière par un numéro.
-                Un prénom peut porter à confusion.
+                <!-- Ici, j'ai choisi d'identifier l'infirmière par un numero.
+                Un prenom peut porter à confusion.
                 Un login peut être ok -->
                 
                 <!-- 
-                Axel a eu un accident de moto à cause duquel il a dû être opéré.
-                Il est immobilisé pour un mois et doit donc recevoir des injections
-                sous-cutanées d'anti-coagulant tous les jours pendant une semaine pour éviter les flébites.
+                Axel a eu un accident de moto à cause duquel il a dû être opere.
+                Il est immobilise pour un mois et doit donc recevoir des injections
+                sous-cutanees d'anti-coagulant tous les jours pendant une semaine pour eviter les flebites.
                 (Q: Peut-on ajouter la contrainte qu'elles doievent être faites à la même heure chaque jour ?)
                 L'intervenant qui prend en charge Axel est le n°2. Cet intervenant
-                ne travaille pas le mercredi et doit donc céder sa place à l'intervenant
+                ne travaille pas le mercredi et doit donc ceder sa place à l'intervenant
                 n°1 ce jour là.
-                Lors de la dernière visite, l'intervenant doit aussi enlever les 25 points de suture de son opération.
+                Lors de la dernière visite, l'intervenant doit aussi enlever les 25 points de suture de son operation.
                 -->
                 <visite date="2014-12-08" intervenant="003">
                     <acte id="109"/>               
@@ -78,22 +78,22 @@
         </patient>
         <patient>        
             <nom>Orouge</nom>
-            <prénom>Elvire</prénom>
+            <prenom>Elvire</prenom>
             <sexe>F</sexe>
             <naissance>1980-03-08</naissance>
-            <!-- Femme, née en mars 80 en France, à Lyon (n° 23 dans le rhône) 
-            52e naissance (clé calculée: 19)-->
-            <numéro>280036902305219</numéro>        
+            <!-- Femme, nee en mars 80 en France, à Lyon (n° 23 dans le rhône) 
+            52e naissance (cle calculee: 19)-->
+            <numero>280036902305219</numero>        
             <adresse>
                 <rue>Rond-Point de la Croix de Vie</rue> 
                 <ville>La Tronche</ville>
                 <codePostal>38700</codePostal>           
             </adresse>
               <!-- 
-                Elvire a été gravement brulée, et l'intervenant doit changer son 
+                Elvire a ete gravement brulee, et l'intervenant doit changer son 
                 pansement tous les 2 jours
-                (Pansement de brûlure étendue ou de plaie chimique ou thermique étendue,
-                    sur une surface supérieure à 5 % de la surface corporelle.....)
+                (Pansement de brûlure etendue ou de plaie chimique ou thermique etendue,
+                    sur une surface superieure à 5 % de la surface corporelle.....)
                 -->
                 <visite date="2014-12-08" intervenant="002">
                     <acte id="300"/>               
@@ -102,21 +102,21 @@
         </patient>
         <patient>        
             <nom>Oscare</nom>
-            <prénom>Pien</prénom>
+            <prenom>Pien</prenom>
             <sexe>M</sexe>
             <naissance>1975-10-25</naissance>
-            <!-- Homme, née en octobre 75 en France, à Chambéry (n° 65 dans la Savoie) 
-            692e naissance (clé calculée: 67)-->
-            <numéro>175107306569267</numéro>
+            <!-- Homme, nee en octobre 75 en France, à Chambery (n° 65 dans la Savoie) 
+            692e naissance (cle calculee: 67)-->
+            <numero>175107306569267</numero>
             <adresse>
                 <rue>rue Casimir Brenier</rue>
                 <ville>Grenoble</ville>
                 <codePostal>38000</codePostal>
             </adresse>
                 <!-- 
-                Oscar s'est cassé l'os du pied en jouant au foot. d
-                Il a besoin d'un prélèvement par ponction veineuse directe le premier
-                jour et injection intraveineuse directe isolée d'anthalgiques les 
+                Oscar s'est casse l'os du pied en jouant au foot. d
+                Il a besoin d'un prelèvement par ponction veineuse directe le premier
+                jour et injection intraveineuse directe isolee d'anthalgiques les 
                 autres jours.
                 -->
                 <visite date="2014-12-08" intervenant="002">
@@ -127,20 +127,20 @@
         </patient>
         <patient>        
             <nom>Xavier</nom>
-            <prénom>Kapoëtla</prénom>
+            <prenom>Kapoëtla</prenom>
             <sexe>M</sexe>
             <naissance>2010-08-02</naissance>
-            <!-- Garçon (4 ans) né en août 2010 en France, à Bordeaux (n° 63 dans la Gironde) 
-            35e naissance (clé calculée: 70)-->
-            <numéro>110083306303570</numéro>
+            <!-- Garçon (4 ans) ne en août 2010 en France, à Bordeaux (n° 63 dans la Gironde) 
+            35e naissance (cle calculee: 70)-->
+            <numero>110083306303570</numero>
             <adresse>
-                <numéro>25</numéro>
+                <numero>25</numero>
                 <rue>rue des Martyrs</rue>
                 <ville>Grenoble</ville>
                 <codePostal>38042</codePostal>
             </adresse>
                 <!-- 
-                Le jeune Xavier est en cours de désensibilation alergique.
+                Le jeune Xavier est en cours de desensibilation alergique.
                 Il doit recevoir tous les jours, l'injection de plusieurs allergènes, etc.
                 -->
                 <visite date="2014-12-08" intervenant="001">
@@ -150,14 +150,14 @@
         </patient>
         <patient>
             <nom>Peplu</nom>
-            <prénom>Jean</prénom>
+            <prenom>Jean</prenom>
             <sexe>M</sexe>
             <naissance>1910-08-02</naissance>
-            <!-- Né dans le Doubs, il y a 104 ans dans le commune de Les Combes 
-            (n° 160), 20e naissance (clé calculée: 10) -->
-            <numéro>110082516002010</numéro>
+            <!-- Ne dans le Doubs, il y a 104 ans dans le commune de Les Combes 
+            (n° 160), 20e naissance (cle calculee: 10) -->
+            <numero>110082516002010</numero>
             <adresse>            
-                <numéro>655</numéro>
+                <numero>655</numero>
                 <rue>Avenue de l'Europe</rue>
                 <ville>Montbonnot-Saint-Martin</ville>
                 <codePostal>38330</codePostal>
@@ -167,5 +167,5 @@
                 </visite>
                 
         </patient>
-        </patients>
+        <patient><nom>Meliard</nom><prenom>Quentin</prenom><numero>66</numero><sexe>M</sexe><naissance></naissance><visite date="2014-12-08"/><adresse><etage></etage><numero>11</numero><rue>Oui des rues</rue><ville>Duingt</ville><codePostal>74410</codePostal></adresse></patient><patient><nom>Pinna</nom><prenom>Loris</prenom><numero>111111111111111</numero><sexe>M</sexe><naissance></naissance><visite date="2014-12-08"/><adresse><etage></etage><numero>22</numero><rue>Oui des rues</rue><ville>Paris</ville><codePostal>75005</codePostal></adresse></patient></patients>
     </cabinet>
