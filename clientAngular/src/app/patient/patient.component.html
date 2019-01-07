@@ -1,1 +1,24 @@
-{{data.nom}}
+<div class="containerCard">
+    <div *ngIf="patient" class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="" alt="Infirmier n°{{infirmier.id}}"> -->
+        <div class="card-body">
+            <h5 class="card-title" ><mat-icon>person</mat-icon> {{patient.nom}} {{patient.prenom}} (<span *ngIf="patient.sexe == 0">H</span><span *ngIf="patient.sexe == 1  ">F</span>)</h5>
+            <p class="card-text">Numéro sécurité sociale: {{patient.numeroSecuriteSociale}}</p>
+            <p class="card-text">Adresse: = 
+                {{patient.adresse.numero}}
+                {{patient.adresse.rue}} <span *ngIf="patient.adresse.etage">(étage {{patient.adresse.etage}})</span>,
+                {{patient.adresse.codePostal}} 
+                {{patient.adresse.ville}}
+               </p>
+            <mat-form-field>
+              <mat-select (selectionChange)="changeInf($event)" placeholder="Affecter à un infirmier" >
+                <mat-option *ngFor="let infirmier of infirmiers" [value]="infirmier.id">
+                  {{infirmier.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+            <button class="btn btn-primary" (click)="affecterPatient(patient)">Affecter</button>
+        </div>
+    </div>
+</div>

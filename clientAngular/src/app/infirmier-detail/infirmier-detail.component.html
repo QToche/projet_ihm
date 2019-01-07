@@ -1,0 +1,100 @@
+<div class="corps">
+
+  <div *ngIf="afficherInfirmier" class="corpsInfirmier">
+    <div class="headerInf">
+      <div>
+        <img src="http://localhost:8090/data/{{_infirmier.photo}} " />
+      </div>
+      <div>
+        <h1>{{_infirmier.id}} {{_infirmier.prenom}} {{_infirmier.nom}}</h1>
+      </div>
+    </div>
+    <div *ngIf="afficherPatient">
+
+      <h2>Ses patients</h2>
+      <div class="containerCard">
+        <div *ngFor="let patient of _infirmier.patients" class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <mat-icon>person</mat-icon> {{patient.nom}} {{patient.prenom}} (<span *ngIf="patient.sexe == 0">H</span><span
+                *ngIf="patient.sexe == 1  ">F</span>)
+            </h5>
+            <p class="card-text">Numéro sécurité sociale: {{patient.numeroSecuriteSociale}}</p>
+            <p class="card-text">Adresse:
+              {{patient.adresse.numero}}
+              {{patient.adresse.rue}} <span *ngIf="patient.adresse.etage">(étage {{patient.adresse.etage}})</span>,
+              {{patient.adresse.codePostal}}
+              {{patient.adresse.ville}}
+            </p>
+
+            <mat-form-field>
+              <mat-select #select placeholder="Affecter à un infirmier">
+                <mat-option *ngFor="let infirmier of infirmiers" [value]="infirmier.id">
+                  {{infirmier.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <p *ngIf="select.value == undefined && buttonSelect">Aucun infirmier selectionné</p>
+            &nbsp;
+            <button #buttonSelect class="btn btn-primary" (click)="affecterPatient(patient, select.value)">Affecter</button>
+
+
+            <button class="btn btn-danger" (click)="desaffecterPatient(patient)">Désaffecter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ancien html patient : avec la popup -->
+    <!-- <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Prénom</th>
+            <th scope="col">Nom</th>
+            <th scope="col">+ d'infos</th>
+            <th scope="col">Affecter</th>
+            <th scope="col">Désaffecter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of _infirmier.patients">
+            <td>{{patient.nom}}</td>
+            <td>{{patient.prenom}}</td>
+            <td>
+              <ng-template #popContent>
+                <p>{{patientClick.nom}} {{patientClick.prenom}}</p>
+                <p>Sexe: <span *ngIf="patientClick.sexe == 0">Homme</span><span *ngIf="patientClick.sexe == 1  ">Femme</span></p>
+                <p>Numéro sécu: {{patientClick.numeroSecuriteSociale}}</p>
+                <p>Adresse:
+                  {{patientClick.adresse.numero}}
+                  {{patientClick.adresse.rue}} <span *ngIf="patient.adresse.etage">(étage {{patient.adresse.etage}})</span>,
+                  {{patientClick.adresse.codePostal}}
+                  {{patientClick.adresse.ville}}</p>
+              </ng-template>
+              <button (click)="assignerPatient(patient)" type="button" class="btn btn-outline-light mr-2" placement="left"
+                autoClose="true" [ngbPopover]="popContent" popoverTitle="">
+                <mat-icon>add</mat-icon>
+              </button>
+            </td>
+            <td>
+              <mat-form-field>
+                <mat-select #select placeholder="Affecter à un infirmier">
+                  <mat-option *ngFor="let infirmier of infirmiers" [value]="infirmier.id">
+                    {{infirmier.id}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <p *ngIf="select.value == undefined && buttonSelect">Aucun infirmier selectionné</p>
+              &nbsp;
+              <button #buttonSelect class="btn btn-light" (click)="affecterPatient(patient, select.value)">Affecter</button>
+            </td>
+            <td>
+              <mat-icon (click)="desaffecterPatient(patient)">delete_sweep</mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+  </div>
+
+
+</div>

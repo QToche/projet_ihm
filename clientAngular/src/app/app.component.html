@@ -1,1 +1,44 @@
-<app-secretary></app-secretary>
+<!-- ancien header -->
+<!-- <div class="header">
+        <mat-toolbar color="warn">
+                <a routerLink="">
+                        <div>
+                                <mat-icon>home</mat-icon>
+                                <span class="titleSecretaire">Cabinet Médical</span>
+                        </div>
+                </a>
+                <a mat-stroked-button routerLink="secretary">Infirmier(s)</a>
+                <a mat-stroked-button routerLink="ajout-patient">
+                        <mat-icon>person_add</mat-icon> Ajouter un patient
+                </a>
+        </mat-toolbar>
+</div> -->
+<div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" routerLink="">
+                        Cabinet médical
+                </a>
+
+                <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+                        <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                        <a class="nav-link" routerLink="secretary">Infirmier(s)</a>
+                                </li>
+
+                                <li class="nav-item">
+                                        <a class="nav-link" routerLink="ajout-patient">
+                                                <mat-icon>person_add</mat-icon> Ajouter un patient
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+        </nav>
+
+        <router-outlet></router-outlet>
+
+</div>

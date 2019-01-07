@@ -4,7 +4,6 @@ import {Adresse} from './adresse';
 
 export interface CabinetInterface {
  infirmiers: InfirmierInterface[];
- patientsNonAffectés: PatientInterface[];
+ patientsNonAffectes: PatientInterface[];
  adresse: Adresse;
 }
-

@@ -1,0 +1,102 @@
+<!-- Formulaire d'ajout d'un patient -->
+<div class="allFormulaire">
+  <h2> Formulaire d'ajout d'un patient</h2>
+  <form (ngSubmit)="onSubmit(formAjout)" #formAjout="ngForm">
+
+    <div class="form-group">
+      <label for="newPrenomPatient" class="col-2 col-form-label">Prénom</label>
+      <div class="col-12">
+        <input #prenomPatient type="text" id="newPrenomPatient" class="form-control" name="newPrenomPatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && prenomPatient.invalid" class="invalid-feedback">
+            <div *ngIf="newPrenomPatient.errors.required">Le prénom est requis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newNomPatient" class="col-2 col-form-label">Nom</label>
+      <div class="col-12">
+        <input #nomPatient type="text" id="newNomPatient" class="form-control" name="newNomPatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && nomPatient.invalid" class="invalid-feedback">
+            <div *ngIf="newNomPatient.errors.required">Le nom est requis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newSexePatient" class="col-2 col-form-label">Sexe</label>
+      <div class="col-12">
+        <select #newSexePatient class="form-control" id="newSexePatient" name="newSexePatient" ngModel required>
+          <option value="H">Homme</option>
+          <option value="F">Femme</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newNumSecuPatient" class="col-10 col-form-label">Numéro de sécurité sociale</label>
+      <div class="col-12">
+        <input #numSecuPatient type="text" id="newNumSecuPatient" class="form-control" name="newNumSecuPatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && numSecuPatient.invalid" class="invalid-feedback">
+            <div *ngIf="newNumSecuPatient.errors.required">Le numéro de sécurité sociale est requis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newNumRuePatient" class="col-10 col-form-label">Numéro de rue</label>
+      <div class="col-12">
+        <input #numRuePatient type="number" id="newNumRuePatient" class="form-control" name="newNumRuePatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && numRuePatient.invalid" class="invalid-feedback">
+            <div *ngIf="newNumRuePatient.errors.required">Le numéro de rue est requis</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="newRuePatient" class="col-10 col-form-label">Rue</label>
+      <div class="col-12">
+        <input #ruePatient type="text" id="newRuePatient" class="form-control" name="newRuePatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && ruePatient.invalid" class="invalid-feedback">
+            <div *ngIf="newRuePatient.errors.required">La rue est requise</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newVillePatient" class="col-10 col-form-label">Ville</label>
+      <div class="col-12">
+        <input #villePatient type="text" id="newVillePatient" class="form-control" name="newVillePatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && villePatient.invalid" class="invalid-feedback">
+            <div *ngIf="newVillePatient.errors.required">La ville est requise</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="newCodePostalPatient" class="col-10 col-form-label">Code Postal</label>
+      <div class="col-12">
+        <input #codePostalPatient type="number" id="newCodePostalPatient" class="form-control" name="newCodePostalPatient" ngModel required/>
+        <div *ngIf="formAjout.submitted && codePostalPatient.invalid" class="invalid-feedback">
+            <div *ngIf="newCodePostalPatient.errors.required">Le code postal est requise</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="newEtagePatient" class="col-10 col-form-label">Étage</label>
+      <div class="col-12">
+        <input #etagePatient type="number" id="newEtagePatient" name="newEtagePatient" class="form-control" ngModel />
+        <div *ngIf="formAjout.submitted && etagePatient.invalid" class="invalid-feedback">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="formAjout.invalid">
+        Ajouter
+      </button>
+    </div>
+  </form>
+</div>

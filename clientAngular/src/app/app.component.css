@@ -1,0 +1,20 @@
+div:nth-child(1) {
+    background: #ecf0f1;
+    height: 100%;
+}
+.titleSecretaire { 
+    padding-left: 10px;
+    margin-right: 20px;
+    vertical-align: middle !important; 
+}
+.fullWidth { 
+    width: 100%;
+}
+.header a {
+    margin-right: 8px;
+    color: white
+}
+.header a:hover{
+    color: white;
+}
+mat-icon { vertical-align: middle !important; }

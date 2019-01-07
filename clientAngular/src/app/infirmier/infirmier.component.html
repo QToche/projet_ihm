@@ -1,2 +1,11 @@
-{{data.id}}
-{{data.nom}}
+<!-- Je verifie si je reçois bien un infirmier -->
+<div class="containerCard">
+    <div *ngIf="infirmier" class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="" alt="Infirmier n°{{infirmier.id}}"> -->
+        <div class="card-body">
+            <h5 class="card-title" ><mat-icon>perm_identity</mat-icon> Infirmier N°{{infirmier.id}}</h5>
+            <p class="card-text">[{{infirmier.id}}] - {{infirmier.prenom}} {{infirmier.nom}}</p>
+            <a  routerLink="/detail/{{infirmier.id}}"><button class="btn btn-info">Voir détails</button></a>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {InfirmierInterface} from '../dataInterfaces/infirmier';
+import { Component, Input, OnInit } from '@angular/core';
+import { InfirmierInterface } from '../dataInterfaces/infirmier';
+
 
 @Component({
   selector: 'app-infirmier',
@@ -7,14 +8,12 @@ import {InfirmierInterface} from '../dataInterfaces/infirmier';
   styleUrls: ['./infirmier.component.css']
 })
 export class InfirmierComponent implements OnInit {
-  @Input() data: InfirmierInterface;
+  @Input() infirmier: InfirmierInterface;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  getPrenom() {
-    return this.data.prénom;
-  }
 }

@@ -11,20 +11,22 @@ export class SecretaryComponent implements OnInit {
 
   private _cms: CabinetInterface;
   public get cms(): CabinetInterface { return this._cms; }
-
+  private afficherInfirmier : Boolean = false;
+  private afficherPatient : Boolean = false;
   constructor(cabinetMedicalService: CabinetMedicalService ) {
-
-    this.initCabinet(cabinetMedicalService);
+    this.initCabinet(cabinetMedicalService)
   }
 
   ngOnInit() {
   }
+
   async initCabinet(cabinetMedicalService) {
     this._cms = await cabinetMedicalService.getData('/data/cabinetInfirmier.xml');
-    console.log( this.cms );
+    this.afficherInfirmier = true;
+    if(this._cms.patientsNonAffectes.length > 0) {
+      this.afficherPatient = true;
+    }
   }
-
-
 
 }
 
